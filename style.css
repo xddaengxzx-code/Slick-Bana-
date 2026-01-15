@@ -1,70 +1,35 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f6fa;
-  color: #111;
+*{box-sizing:border-box;font-family:system-ui,Segoe UI,Arial}
+body{margin:0;background:#f5f7fb;color:#111}
+.hero{text-align:center;padding:20px}
+.hero img{width:100%;border-radius:16px}
+.hint{color:#666;font-size:14px}
+
+.card{
+  background:#fff;margin:16px;padding:16px;border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08)
+}
+.card h2{margin-top:0}
+
+.item{
+  border:1px solid #eee;padding:12px;border-radius:12px;margin-bottom:12px
+}
+.highlight{border-color:#ffd400;background:#fffbe6}
+
+button{
+  width:100%;padding:12px;border:none;border-radius:12px;
+  background:#2563eb;color:#fff;font-size:16px
 }
 
-.header {
-  background: #2563eb;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
+.product-img{
+  width:100%;max-width:320px;display:block;margin:10px auto;border-radius:12px
 }
+.product-name{text-align:center;font-weight:700}
 
-section {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 14px;
-}
+.qty{display:flex;gap:10px;justify-content:center;align-items:center}
+.qty input{width:60px;text-align:center;font-size:18px}
 
-.btn {
-  display: block;
-  text-align: center;
-  padding: 14px;
-  margin-top: 15px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
+.full{width:100%;border-radius:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid img{width:100%;border-radius:12px}
 
-.primary {
-  background: #2563eb;
-  color: white;
-}
-
-.secondary {
-  background: #fde68a;
-  color: #000;
-}
-
-.product-img {
-  width: 100%;
-  max-width: 320px;
-  display: block;
-  margin: 0 auto;
-}
-
-.product-name {
-  text-align: center;
-  font-weight: bold;
-}
-
-.qty {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 15px 0;
-}
-
-.qty button {
-  width: 45px;
-  font-size: 20px;
-}
-
-.qty input {
-  width: 60px;
-  text-align: center;
-  font-size: 18px;
-}
+footer{text-align:center;padding:20px;color:#777;font-size:14px}
