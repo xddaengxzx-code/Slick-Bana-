@@ -1,44 +1,28 @@
-let qty = 1;
+const WHATSAPP = "60167003569"; // tukar kalau perlu
 
-document.getElementById("basicPrice").innerText = SERVICE.basicFrom;
-document.getElementById("productName").innerText = PRODUCT.name;
-document.getElementById("productPrice").innerText = PRODUCT.price;
-
-function changeQty(n){
-  qty += n;
-  if(qty < 1) qty = 1;
-  document.getElementById("qty").innerText = qty;
-}
-
-function bookService(){
-  const msg =
-`Hi XD Waterless,
-Saya nak booking servis.
-
+function orderService(service){
+  const msg = `Saya nak booking ${service}.
 Model kereta:
 Lokasi:
-Tarikh:
-Masa:`;
+Tarikh:`;
+  openWA(msg);
+}
+
+function askPrice(){
+  const msg = `Saya nak tanya harga Slick Bana 🍌.
+Model kereta saya:`;
   openWA(msg);
 }
 
 function orderProduct(){
-  const total = qty * PRODUCT.price;
-  const msg =
-`Hi XD Waterless,
-Saya nak order ${PRODUCT.name}.
-
-Quantity: ${qty}
-Harga seunit: RM${PRODUCT.price}
-Total: RM${total}
-
-Delivery / Pickup:
-Nama:
-Alamat:`;
+  const qty = document.getElementById("qty").value;
+  const msg = `Order Slick Bana 🍌
+Quantity: ${qty}`;
   openWA(msg);
 }
 
-function openWhatsApp(customMsg){
-  const text = encodeURIComponent(customMsg || "Hi XD Waterless");
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,"_blank");
+function openWA(msg){
+  window.open(
+    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
+  );
 }
