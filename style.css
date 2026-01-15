@@ -1,51 +1,70 @@
-*{box-sizing:border-box;font-family:system-ui,Segoe UI,Arial}
-body{margin:0;background:#f5f7fb;color:#111}
-.hero{text-align:center;padding:20px}
-.hero img{width:100%;border-radius:16px}
-.hero h1{margin:10px 0}
-.hint{color:#666;font-size:14px}
-
-.card{
-  background:#fff;
-  margin:16px;
-  padding:16px;
-  border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f6fa;
+  color: #111;
 }
 
-.card h2{margin-top:0}
-ul{padding-left:20px}
-
-.item{border:1px solid #eee;padding:12px;border-radius:12px;margin-bottom:12px}
-.highlight{border-color:#ffd400;background:#fffbe6}
-
-button{
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:12px;
-  background:#2563eb;
-  color:#fff;
-  font-size:16px;
+.header {
+  background: #2563eb;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.qty{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  justify-content:center;
-}
-.qty input{
-  width:50px;
-  text-align:center;
-  font-size:16px;
+section {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 14px;
 }
 
-.product,.full{width:100%;border-radius:12px}
+.btn {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-footer{
-  text-align:center;
-  padding:20px;
-  color:#777;
-  font-size:14px;
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary {
+  background: #fde68a;
+  color: #000;
+}
+
+.product-img {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-name {
+  text-align: center;
+  font-weight: bold;
+}
+
+.qty {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.qty button {
+  width: 45px;
+  font-size: 20px;
+}
+
+.qty input {
+  width: 60px;
+  text-align: center;
+  font-size: 18px;
 }
