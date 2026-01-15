@@ -1,14 +1,23 @@
-// =========================
-// GLOBAL CONFIG
-// =========================
-const WHATSAPP = "60167003569";
+/* ================================
+   GLOBAL CONFIG
+================================ */
+const WHATSAPP_NUMBER = "60167003569";
 
-// =========================
-// SERVIS PRICING
-// =========================
+/* ================================
+   BRAND
+================================ */
+const BRAND = {
+  name: "XD Waterless",
+  tagline: "Clean • Shine • Protect"
+};
+
+/* ================================
+   SERVICES (BOOKING)
+================================ */
 const SERVICES = {
-  pureWash: {
-    name: "Pure Wash",
+  waterless: {
+    name: "XD Waterless – Pure Wash",
+    description: "Clean only (tanpa wax, tanpa bau kuat)",
     price: {
       S: 20,
       M: 25,
@@ -16,32 +25,78 @@ const SERVICES = {
       XL: 35
     }
   },
-  slickBana: {
-    name: "Slick Bana 🍌",
-    price: {
-      S: 25,
-      M: 30,
-      L: 35,
-      XL: 40
-    }
+
+  slickBanaAddon: {
+    name: "Slick Bana 🍌 Add-On",
+    description: "Wax + Bau + Extra Kilat",
+    note: "Harga ikut model kereta"
   }
 };
 
-// =========================
-// PRODUCT
-// =========================
-const PRODUCTS = {
-  slickBanaBottle: {
-    name: "Slick Bana 🍌",
-    price: 25
-  }
+/* ================================
+   VEHICLE SIZE REFERENCE
+================================ */
+const VEHICLE_SIZE = {
+  S: ["Axia", "Myvi", "Saga", "Iriz", "Vios (lama)"],
+  M: ["City", "Vios", "Civic", "Persona", "Altis"],
+  L: ["X50", "X70", "HR-V", "CR-V", "Alza", "Rush"],
+  XL: ["Alphard", "Vellfire", "Serena", "Hiace", "SUV besar"]
 };
 
-// =========================
-// IMAGES (IKUT NAMA FILE KAU)
-// =========================
-const IMAGES = {
-  hero: "IMG-20260115-WA0039.jpg",
-  bottle: "IMG_20260102_130022_506.webp",
-  beforeAfter: "IMG_20260113_015550.jpg"
+/* ================================
+   PRODUCTS (MARKETPLACE)
+================================ */
+const PRODUCTS = [
+  {
+    id: "slick-bana-bottle",
+    name: "Slick Bana 🍌 Bottle",
+    description: "Waterless Wash + Wax",
+    image: "file_0000000092e87208968d22fdb0ee59ce.png",
+    price: "Tanya Harga"
+  }
+];
+
+/* ================================
+   BEFORE / AFTER IMAGES
+================================ */
+const GALLERY = {
+  beforeAfter: [
+    "IMG_20260113_015550.jpg"
+  ],
+  showcase: [
+    "IMG-20260115-WA0039.jpg",
+    "IMG-20260115-WA0040.jpg",
+    "IMG-20260115-WA0042.jpg"
+  ]
+};
+
+/* ================================
+   WHATSAPP MESSAGE TEMPLATE
+================================ */
+const WHATSAPP_TEMPLATE = {
+  booking(serviceName) {
+    return `BOOKING SERVIS:
+${serviceName}
+
+Nama:
+Lokasi:
+Model Kereta:
+Tarikh:`;
+  },
+
+  askPrice(itemName) {
+    return `TANYA HARGA:
+${itemName}
+
+Model Kereta:`;
+  },
+
+  orderProduct(productName, qty) {
+    return `ORDER PRODUK:
+${productName}
+Quantity: ${qty}
+
+Nama:
+Alamat:`;
+  }
 };
