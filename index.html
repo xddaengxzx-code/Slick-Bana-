@@ -3,73 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slick Bana | XD Waterless</title>
+  <title>Slick Bana – XD Waterless</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="topbar">
-  <div class="brand">
-    <strong>Slick Bana</strong>
-    <span>XD Waterless</span>
-  </div>
-  <nav>
-    <a href="#booking">Booking</a>
-    <a href="#product">Order</a>
-  </nav>
+<header class="hero">
+  <img src="IMG_20260102_130022_506.webp" class="logo" />
+  <h1>Slick Bana 🍌</h1>
+  <p>Servis Waterless • Kilat Cepat • Jimat Masa & Air</p>
 </header>
 
-<main class="container">
+<section class="hero-img">
+  <img src="IMG-20260115-WA0039.jpg" />
+</section>
 
-  <section class="card hero">
-    <h1>XD WATERLESS</h1>
-    <p>Cuci tanpa air. Cepat, bersih & selamat.</p>
-    <div class="row">
-      <a class="btn" href="#booking">BOOK SERVICE</a>
-      <a class="btn outline" href="#product">ORDER PRODUCT</a>
-    </div>
-  </section>
+<section class="card">
+  <h2>Apa Itu Waterless?</h2>
+  <p>
+    Waterless ialah teknik cuci kereta tanpa air mengalir.
+    Selamat, cepat & sesuai untuk kawasan rumah / parking.
+  </p>
+</section>
 
-  <section id="booking" class="card">
-    <h2>🧼 Booking Servis</h2>
-    <p>Harga Basic dari <b>RM<span id="basicPrice"></span></b> (ikut saiz kereta)</p>
-    <ul>
-      <li>Bersih luaran tanpa air</li>
-      <li>On-call / mobile</li>
-      <li>Add-on Slick Bana tersedia</li>
-    </ul>
-    <button class="btn" onclick="bookService()">BOOK VIA WHATSAPP</button>
-  </section>
+<section class="card">
+  <h2>Before / After</h2>
+  <img src="IMG_20260113_015550.jpg" class="img-full" />
+</section>
 
-  <section id="product" class="card">
-    <h2>🛒 Order Produk</h2>
-    <h3 id="productName"></h3>
-    <p>Harga: RM<span id="productPrice"></span> / botol</p>
+<section class="card grid">
+  <img src="IMG-20260115-WA0042.jpg" />
+  <img src="IMG-20260115-WA0040.jpg" />
+</section>
 
-    <div class="qty">
-      <button onclick="changeQty(-1)">−</button>
-      <span id="qty">1</span>
-      <button onclick="changeQty(1)">+</button>
-    </div>
+<section class="card">
+  <h2>Pakej & Harga</h2>
 
-    <button class="btn" onclick="orderProduct()">ORDER VIA WHATSAPP</button>
-  </section>
+  <div class="product">
+    <h3>XD Waterless – Basic</h3>
+    <p>Dari RM20 – RM35 (ikut saiz kereta)</p>
+    <button onclick="orderService('XD Waterless Basic')">
+      Book Sekarang
+    </button>
+  </div>
 
-  <section class="card">
-    <h2>❓ Apa itu Waterless?</h2>
-    <p>Cucian tanpa air menggunakan formula khas untuk kotoran ringan.</p>
-    <ul>
-      <li>Jimat masa & air</li>
-      <li>Sesuai parking</li>
-      <li>Tidak sesuai lumpur tebal</li>
-    </ul>
-  </section>
+  <div class="product highlight">
+    <h3>Add-On Slick Bana 🍌</h3>
+    <p>Wax + Bau + Extra Kilat</p>
+    <button onclick="askPrice()">
+      Tanya Harga (Ikut Model Kereta)
+    </button>
+  </div>
+</section>
 
-</main>
+<section class="card">
+  <h2>Order Produk</h2>
 
-<a class="float" onclick="openWhatsApp()">💬 WhatsApp</a>
+  <div class="product">
+    <h3>Slick Bana 🍌 Bottle</h3>
+    <label>Quantity:</label>
+    <input type="number" id="qty" value="1" min="1" />
+    <button onclick="orderProduct()">
+      Order via WhatsApp
+    </button>
+  </div>
+</section>
 
-<script src="data.js"></script>
+<footer>
+  © XD DAENGXZX LAGACY
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
