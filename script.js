@@ -1,28 +1,61 @@
-const WHATSAPP = "60167003569"; // tukar kalau perlu
+/* =========================
+   script.js  (MATCH data.js)
+   ========================= */
 
-function orderService(service){
-  const msg = `Saya nak booking ${service}.
-Model kereta:
-Lokasi:
-Tarikh:`;
-  openWA(msg);
-}
+let qty = 1;
 
-function askPrice(){
-  const msg = `Saya nak tanya harga Slick Bana 🍌.
-Model kereta saya:`;
-  openWA(msg);
-}
-
-function orderProduct(){
-  const qty = document.getElementById("qty").value;
-  const msg = `Order Slick Bana 🍌
-Quantity: ${qty}`;
-  openWA(msg);
-}
-
-function openWA(msg){
+/* OPEN WHATSAPP */
+function wa(msg){
   window.open(
-    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
+    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`,
+    "_blank"
+  );
+}
+
+/* BOOK SERVICE */
+function bookService(serviceKey){
+  const s = SERVICES[serviceKey];
+  wa(
+`Booking Servis:
+${s.name}
+
+Saiz Kereta (S/M/L/XL):
+Model Kereta:
+Lokasi:
+Tarikh:`
+  );
+}
+
+/* ASK PRICE (ADD-ON) */
+function askPrice(){
+  wa(
+`Tanya Harga Slick Bana 🍌
+Model Kereta:
+Saiz (S/M/L/XL):`
+  );
+}
+
+/* QUANTITY CONTROL */
+function changeQty(n){
+  qty = Math.max(1, qty + n);
+  const el = document.getElementById("qty");
+  if(el) el.value = qty;
+}
+
+/* ORDER PRODUCT */
+function orderProduct(){
+  const p = PRODUCTS.slickBanaBottle;
+  const total = qty * p.price;
+  wa(
+`Order Produk:
+${p.name}
+
+Quantity: ${qty}
+Harga Seunit: RM${p.price}
+Total: RM${total}
+
+Delivery / Pickup:
+Nama:
+Alamat:`
   );
 }
