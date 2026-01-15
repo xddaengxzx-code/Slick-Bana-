@@ -3,175 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slick Bana 🍌 | XD Waterless</title>
-
-  <style>
-    :root{
-      --bg:#ffffff;
-      --card:#ffffff;
-      --text:#111827;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-      --primary:#2563eb;
-      --primary-soft:#e0e7ff;
-      --radius:16px;
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-
-    .app{
-      max-width:420px;
-      margin:auto;
-      padding:20px;
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:18px;
-      margin-bottom:16px;
-    }
-
-    h1{
-      font-size:22px;
-      margin:0 0 8px;
-    }
-
-    h2{
-      font-size:16px;
-      margin:0 0 10px;
-    }
-
-    p{
-      margin:0 0 10px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .price{
-      font-size:18px;
-      font-weight:700;
-      color:var(--primary);
-      margin:8px 0;
-    }
-
-    .list{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      margin-top:10px;
-    }
-
-    .item{
-      display:flex;
-      gap:8px;
-      font-size:14px;
-    }
-
-    .dot{
-      width:8px;
-      height:8px;
-      border-radius:50%;
-      background:var(--primary);
-      margin-top:6px;
-      flex-shrink:0;
-    }
-
-    .btn{
-      display:block;
-      width:100%;
-      text-align:center;
-      padding:14px;
-      border-radius:14px;
-      background:var(--primary);
-      color:#fff;
-      font-weight:700;
-      text-decoration:none;
-      margin-top:12px;
-    }
-
-    .badge{
-      display:inline-block;
-      background:var(--primary-soft);
-      color:var(--primary);
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:600;
-      margin-bottom:8px;
-    }
-
-    .footer{
-      text-align:center;
-      font-size:12px;
-      color:var(--muted);
-      margin-top:20px;
-    }
-  </style>
+  <title>Slick Bana | XD Waterless</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="app">
 
-    <!-- HERO -->
-    <div class="card">
-      <span class="badge">XD WATERLESS</span>
-      <h1>Slick Bana 🍌</h1>
-      <p>Cuci tanpa air + shine cepat. Sesuai untuk customer yang nak <b>bersih, wangi & nampak mahal</b> tanpa buang masa.</p>
-    </div>
-
-    <!-- BASIC PRICE -->
-    <div class="card">
-      <h2>Basic Waterless Wash</h2>
-      <p>Harga asas ikut saiz kereta.</p>
-      <div class="price">Dari RM20</div>
-
-      <div class="list">
-        <div class="item"><div class="dot"></div>Bersih luaran tanpa air</div>
-        <div class="item"><div class="dot"></div>Lap selamat (low risk swirl)</div>
-        <div class="item"><div class="dot"></div>Suitable harian / parking luar</div>
-      </div>
-    </div>
-
-    <!-- ADD ON -->
-    <div class="card">
-      <h2>Add-On: Slick Bana 🍌</h2>
-      <p>Upgrade dari “cuci biasa” ke <b>kilat & licin</b>.</p>
-
-      <div class="list">
-        <div class="item"><div class="dot"></div>Gloss lebih naik</div>
-        <div class="item"><div class="dot"></div>Bau wangi premium</div>
-        <div class="item"><div class="dot"></div>Feel licin bila sentuh</div>
-      </div>
-
-      <p><b>👉 Harga ikut model & saiz kereta.</b><br/>
-      <span style="color:#111">Tanya kami dulu untuk confirm.</span></p>
-    </div>
-
-    <!-- CTA -->
-    <div class="card">
-      <h2>Booking & Harga Tepat</h2>
-      <p>Beritahu model kereta (contoh: Myvi, City, Alza).</p>
-
-      <a class="btn"
-         href="https://wa.me/60167003569?text=Hi%20XD%20Waterless%2C%20nak%20tanya%20harga%20Slick%20Bana%20untuk%20kereta%20saya.">
-         WhatsApp Sekarang
-      </a>
-    </div>
-
-    <div class="footer">
-      XD DAENGXZX LAGACY • ⭐ CHOICE IS YOURS ✅
-    </div>
-
+<header class="topbar">
+  <div class="brand">
+    <strong>Slick Bana</strong>
+    <span>XD Waterless</span>
   </div>
+  <nav>
+    <a href="#booking">Booking</a>
+    <a href="#product">Order</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="card hero">
+    <h1>XD WATERLESS</h1>
+    <p>Cuci tanpa air. Cepat, bersih & selamat.</p>
+    <div class="row">
+      <a class="btn" href="#booking">BOOK SERVICE</a>
+      <a class="btn outline" href="#product">ORDER PRODUCT</a>
+    </div>
+  </section>
+
+  <section id="booking" class="card">
+    <h2>🧼 Booking Servis</h2>
+    <p>Harga Basic dari <b>RM<span id="basicPrice"></span></b> (ikut saiz kereta)</p>
+    <ul>
+      <li>Bersih luaran tanpa air</li>
+      <li>On-call / mobile</li>
+      <li>Add-on Slick Bana tersedia</li>
+    </ul>
+    <button class="btn" onclick="bookService()">BOOK VIA WHATSAPP</button>
+  </section>
+
+  <section id="product" class="card">
+    <h2>🛒 Order Produk</h2>
+    <h3 id="productName"></h3>
+    <p>Harga: RM<span id="productPrice"></span> / botol</p>
+
+    <div class="qty">
+      <button onclick="changeQty(-1)">−</button>
+      <span id="qty">1</span>
+      <button onclick="changeQty(1)">+</button>
+    </div>
+
+    <button class="btn" onclick="orderProduct()">ORDER VIA WHATSAPP</button>
+  </section>
+
+  <section class="card">
+    <h2>❓ Apa itu Waterless?</h2>
+    <p>Cucian tanpa air menggunakan formula khas untuk kotoran ringan.</p>
+    <ul>
+      <li>Jimat masa & air</li>
+      <li>Sesuai parking</li>
+      <li>Tidak sesuai lumpur tebal</li>
+    </ul>
+  </section>
+
+</main>
+
+<a class="float" onclick="openWhatsApp()">💬 WhatsApp</a>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
