@@ -3,81 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XD Waterless | Slick Bana 🍌</title>
-  <link rel="stylesheet" href="style.css">
+  <title>XD Waterless – Slick Bana</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #f2f2f2;
+      color: #111;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 12px 0 4px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .service {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .service:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #0a7cff;
+      margin-top: 4px;
+    }
+
+    .highlight {
+      background: #f0f7ff;
+      padding: 12px;
+      border-radius: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      background: #0a7cff;
+      color: #fff;
+      text-align: center;
+      padding: 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin: 24px 0;
+    }
+  </style>
 </head>
+
 <body>
+<div class="container">
 
-<header class="hero">
-  <img src="IMG-20260115-WA0039.jpg" alt="XD Waterless">
+  <!-- HERO -->
+  <div class="hero">
+    <img src="IMG-20260115-WA0039.jpg" alt="XD Waterless">
+  </div>
+
   <h1>XD Waterless</h1>
-  <p>Cuci Kereta Tanpa Air • Cepat • Selamat</p>
-  <span class="hint">⬇️ Slide ke bawah</span>
-</header>
+  <div class="subtitle">Cuci Kereta Tanpa Air · Selamat · Premium</div>
 
-<section class="card">
-  <h2>Apa Itu Waterless?</h2>
-  <p>
-    Waterless ialah teknik cuci kereta tanpa air mengalir.
-    Menggunakan formula khas untuk angkat kotoran dengan selamat,
-    sesuai untuk rumah & parking apartment.
-  </p>
-</section>
-
-<section class="card">
-  <h2>Servis Cuci Kereta (Waterless)</h2>
-
-  <div class="item">
-    <h3>Pure Wash (Cuci Biasa)</h3>
-    <p>Waterless clean sahaja • Bermula RM20 (ikut saiz kereta)</p>
-    <button onclick="bookWaterless()">Book Servis</button>
+  <!-- APA ITU -->
+  <div class="card">
+    <h2>Apa itu Waterless?</h2>
+    <p>
+      Waterless ialah teknik cucian tanpa air mengalir.
+      Menggunakan formula khas & kain microfiber detailing
+      untuk angkat kotoran dengan selamat tanpa calar.
+    </p>
   </div>
 
-  <div class="item highlight">
-    <h3>Wash & Wax – Slick Bana 🍌</h3>
-    <p>Waterless + Wax + Bau Pisang</p>
-    <p><b>Harga ikut model & saiz kereta</b></p>
-    <button onclick="bookSlickBanaAddon()">Tanya Harga</button>
-  </div>
-</section>
+  <!-- SERVIS -->
+  <div class="card">
+    <h2>Servis A-La-Carte</h2>
 
-<section class="card">
-  <h2>Produk Waterless</h2>
-  <p>
-    Produk ini menggunakan sistem waterless yang sama
-    seperti servis kami — untuk kegunaan sendiri di rumah.
-  </p>
+    <div class="service">
+      <strong>Pure Wash</strong>
+      <p>Cuci bersih tanpa wax · Maintenance harian</p>
+      <div class="price">Bermula RM20 (ikut saiz)</div>
+    </div>
 
-  <img
-    src="file_0000000092e87208968d22fdb0ee59ce.png"
-    alt="Slick Bana Bottle"
-    class="product-img"
-  >
-
-  <p class="product-name">Slick Bana 🍌 Bottle</p>
-
-  <div class="qty">
-    <button onclick="changeQty(-1)">−</button>
-    <input id="qty" value="1" readonly>
-    <button onclick="changeQty(1)">+</button>
+    <div class="service highlight">
+      <strong>Pure Wash + Slick Bana 🍌</strong>
+      <p>Spray wax USA · Licin, berkilat & wangi</p>
+      <div class="price">Bermula RM25 (ikut saiz)</div>
+    </div>
   </div>
 
-  <button onclick="orderProduct()">Order via WhatsApp</button>
-</section>
+  <!-- MEMBERSHIP -->
+  <div class="card">
+    <h2>Membership (5x Sebulan)</h2>
+    <p>Bayar 4 · Percuma 1 · Slot terjamin</p>
 
-<section class="card">
-  <h2>Before / After</h2>
-  <img src="IMG_20260113_015550.jpg" class="full" alt="Before After">
-</section>
+    <div class="service">
+      <strong>SILVER</strong>
+      <p>5x Pure Wash</p>
+      <div class="price">RM110 – RM155</div>
+    </div>
 
-<section class="card grid">
-  <img src="IMG-20260115-WA0040.jpg" alt="Showcase">
-  <img src="IMG-20260115-WA0042.jpg" alt="Showcase">
-</section>
+    <div class="service highlight">
+      <strong>GOLD 🍌 (Best Seller)</strong>
+      <p>4x Pure + 1x Slick Bana</p>
+      <div class="price">RM140 – RM195</div>
+    </div>
 
-<footer>
-  © XD DAENGXZX LAGACY
-</footer>
+    <div class="service">
+      <strong>PLATINUM</strong>
+      <p>Pure + Slick + Butter Wet Wax</p>
+      <div class="price">RM250 – RM320</div>
+    </div>
+
+    <a class="btn" href="https://wa.me/60167003569">
+      WhatsApp Untuk Daftar Membership
+    </a>
+  </div>
+
+  <!-- PRODUK DIGUNAKAN -->
+  <div class="card gallery">
+    <h2>Produk Premium Digunakan</h2>
+    <img src="Screenshot_2026-01-16-11-57-19-403_com.shopee.my-edit.jpg">
+    <img src="IMG_20260116_111117.png">
+    <img src="IMG_20260116_111147.png">
+  </div>
+
+  <footer>
+    XD Waterless · House of Detailing<br>
+    ⭐ Choice Is Yours
+  </footer>
+
+</div>
 
 <script src="data.js"></script>
 <script src="script.js"></script>
