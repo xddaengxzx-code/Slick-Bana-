@@ -1,1 +1,1 @@
-console.log("House of Detailing | XD Waterless – System Locked");
+console.log("XD Waterless Landing Page Loaded");
