@@ -1,35 +1,92 @@
-*{box-sizing:border-box;font-family:system-ui,Segoe UI,Arial}
-body{margin:0;background:#f5f7fb;color:#111}
-.hero{text-align:center;padding:20px}
-.hero img{width:100%;border-radius:16px}
-.hint{color:#666;font-size:14px}
-
-.card{
-  background:#fff;margin:16px;padding:16px;border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08)
-}
-.card h2{margin-top:0}
-
-.item{
-  border:1px solid #eee;padding:12px;border-radius:12px;margin-bottom:12px
-}
-.highlight{border-color:#ffd400;background:#fffbe6}
-
-button{
-  width:100%;padding:12px;border:none;border-radius:12px;
-  background:#2563eb;color:#fff;font-size:16px
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background: #f5f6f8;
+  color: #111;
 }
 
-.product-img{
-  width:100%;max-width:320px;display:block;margin:10px auto;border-radius:12px
+.hero {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 0 0 24px 24px;
 }
-.product-name{text-align:center;font-weight:700}
 
-.qty{display:flex;gap:10px;justify-content:center;align-items:center}
-.qty input{width:60px;text-align:center;font-size:18px}
+.hero-img {
+  width: 100%;
+  border-radius: 16px;
+}
 
-.full{width:100%;border-radius:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.grid img{width:100%;border-radius:12px}
+.logo {
+  width: 140px;
+  margin: 16px auto;
+}
 
-footer{text-align:center;padding:20px;color:#777;font-size:14px}
+.subtitle {
+  color: #555;
+}
+
+.card {
+  background: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.service {
+  margin-bottom: 16px;
+}
+
+.highlight {
+  background: #f0f7ff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.price {
+  color: #0066ff;
+  font-weight: bold;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 16px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+.note {
+  font-size: 14px;
+  color: #444;
+}
+
+.cta {
+  padding: 20px;
+  text-align: center;
+}
+
+.cta a {
+  display: block;
+  background: #007aff;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
