@@ -1,15 +1,12 @@
 const pricing = {
-  pureCare: "RM29 – RM39 (ikut saiz)",
-  slickBana: "RM55 – RM75 (ikut saiz)",
+  alacarte: {
+    pure: "RM29 – RM39",
+    slick: "RM55 – RM75"
+  },
   membership: {
-    silver: "RM110 – RM155",
-    gold: "RM140 – RM195",
-    platinum: "RM250 – RM320"
+    S: { silver: 110, gold: 140, platinum: 250 },
+    M: { silver: 125, gold: 155, platinum: 270 },
+    L: { silver: 140, gold: 175, platinum: 290 },
+    XL:{ silver: 155, gold: 195, platinum: 320 }
   }
-};
-
-const systemInfo = {
-  brand: "House of Detailing",
-  poweredBy: "XD Waterless System",
-  method: "100% Waterless – Tanpa Air Mengalir"
 };
